@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftShop - Магазин игровых построек</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="icon" href="./styles/logo.png">
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="bg-gray-800 p-5">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">CraftShop</h1>
+            <p class="text-xl">Магазин игровых построек</p>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav class="bg-gray-700 p-4">
+      <div class="container mx-auto flex justify-around">
+            <a href="#" class="hover:text-gray-400">Главная</a>
+            <a href="#products" class="hover:text-gray-400">Товары</a>
+            <a href="#contact" class="hover:text-gray-400">Контакты</a>
+            <a href="#userOrders" onclick="showOrders()" class="hover:text-gray-400">Мои заказы</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="p-10 text-center">
+        <h2 class="text-4xl font-bold mb-5">Добро пожаловать в CraftShop!</h2>
+        <p class="text-lg">Продаем лучшие игровые постройки и фермы.</p>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="p-10">
+        <h2 class="text-3xl font-bold text-center mb-5">Наши Товары</h2>
+
+        <!-- Search Bar -->
+        <div class="mb-10 text-center">
+          <input type="text" id="searchInput" oninput="filterProducts()" placeholder="Поиск товаров..." class="bg-gray-700 text-white p-2 rounded w-1/2">
+        </div>
+
+        <!-- Categories -->
+        <div>
+            <h3 class="text-2xl font-bold mb-5">Здания</h3>
+            <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              <div class="bg-gray-800 p-5 rounded shadow product-card" data-category="Здания">
+                    <h3 class="text-xl font-bold">Средневековый дом (Маленький)</h3>
+                    <p>Категория: Здания</p>
+                    <p>Размер: Маленький</p>
+                    <p class="font-bold priceBox">Цена: 20,000 UZS</p>
+                    <button onclick="openForm('Средневековый дом (Маленький)')" class="bg-blue-500 text-white px-4 py-2 rounded mt-3">Купить</button>
+                </div>
+                <div class="bg-gray-800 p-5 rounded shadow product-card" data-category="Здания">
+                    <h3 class="text-xl font-bold">Средневековый дом (Средний)</h3>
+                    <p>Категория: Здания</p>
+                    <p>Размер: Средний</p>
+                    <p class="font-bold priceBox">Цена: 30,000 UZS</p>
+                    <button onclick="openForm('Средневековый дом (Средний)')" class="bg-blue-500 text-white px-4 py-2 rounded mt-3">Купить</button>
+                </div>
+                <div class="bg-gray-800 p-5 rounded shadow product-card" data-category="Здания">
+                    <h3 class="text-xl font-bold">Средневековый дом (Большой)</h3>
+                    <p>Категория: Здания</p>
+                    <p>Размер: Большой</p>
+                    <p class="font-bold priceBox">Цена: 40,000 UZS</p>
+                    <button onclick="openForm('Средневековый дом (Большой)')" class="bg-blue-500 text-white px-4 py-2 rounded mt-3">Купить</button>
+                </div>
+                <div class="bg-gray-800 p-5 rounded shadow product-card" data-category="Здания">
+                  <h3 class="text-xl font-bold">Средневековый замок (Маленький)</h3>
+                    <p>Категория: Здания</p>
+                    <p>Размер: Маленький</p>
+                    <p class="font-bold priceBox">Цена: 25,000 UZS</p>
+                    <button onclick="openForm('Средневековый замок (Маленький)')" class="bg-blue-500 text-white px-4 py-2 rounded mt-3">Купить</button>
+                  </div>
+                <div class="bg-gray-800 p-5 rounded shadow product-card" data-category="Здания">
+                    <h3 class="text-xl font-bold">Средневековый замок (Средний)</h3>
+                    <p>Категория: Здания</p>
+                    <p>Размер: Средний</p>
+                    <p class="font-bold priceBox">Цена: 35,000 UZS</p>
+                    <button onclick="openForm('Средневековый замок (Средний)')" class="bg-blue-500 text-white px-4 py-2 rounded mt-3">Купить</button>
+                  </div>
+                <div class="bg-gray-800 p-5 rounded shadow product-card" data-category="Здания">
+                    <h3 class="text-xl font-bold">Средневековый замок (Большой)</h3>
+                    <p>Категория: Здания</p>
+                    <p>Размер: Большой</p>
+                    <p class="font-bold priceBox">Цена: 45,000 UZS</p>
+                    <button onclick="openForm('Средневековый замок (Большой)')" class="bg-blue-500 text-white px-4 py-2 rounded mt-3">Купить</button>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-bold mt-10 mb-5">Фермы</h3>
+            <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-gray-800 p-5 rounded shadow product-card" data-category="Фермы">
+                    <h3 class="text-xl font-bold">Фонтан</h3>
+                    <p>Категория: Здания</p>
+                    <p>Размер: По умолчанию</p>
+                    <p class="font-bold priceBox">Цена: 15,000 UZS</p>
+                    <button onclick="openForm('Фонтан')" class="bg-blue-500 text-white px-4 py-2 rounded mt-3">Купить</button>
+                </div>
+                <div class="bg-gray-800 p-5 rounded shadow product-card" data-category="Фермы">
+                    <h3 class="text-xl font-bold">Ферма железа</h3>
+                    <p>Категория: Фермы</p>
+                    <p>Размер: По умолчанию</p>
+                    <p class="font-bold priceBox">Цена: 17,000 UZS</p>
+                    <button onclick="openForm('Ферма железа')" class="bg-blue-500 text-white px-4 py-2 rounded mt-3">Купить</button>
+                </div>
+                <div class="bg-gray-800 p-5 rounded shadow product-card" data-category="Фермы">
+                    <h3 class="text-xl font-bold">Ферма золота</h3>
+                    <p>Категория: Фермы</p>
+                    <p>Размер: По умолчанию</p>
+                    <p class="font-bold priceBox">Цена: 22,000 UZS</p>
+                    <button onclick="openForm('Ферма золота')" class="bg-blue-500 text-white px-4 py-2 rounded mt-3">Купить</button>
+                </div>
+                <div class="bg-gray-800 p-5 rounded shadow product-card" data-category="Фермы">
+                    <h3 class="text-xl font-bold">Ферма эндерменов</h3>
+                    <p>Категория: Фермы</p>
+                    <p>Размер: По умолчанию</p>
+                    <p class="font-bold priceBox">Цена: 23,000 UZS</p>
+                    <button onclick="openForm('Ферма эндерменов')" class="bg-blue-500 text-white px-4 py-2 rounded mt-3">Купить</button>
+                </div>
+                <div class="bg-gray-800 p-5 rounded shadow product-card" data-category="Фермы">
+                    <h3 class="text-xl font-bold">Ферма рейдов</h3>
+                    <p>Категория: Фермы</p>
+                    <p>Размер: По умолчанию</p>
+                    <p class="font-bold priceBox">Цена: 33,000 UZS</p>
+                    <button onclick="openForm('Ферма рейдов')" class="bg-blue-500 text-white px-4 py-2 rounded mt-3">Купить</button>
+                </div>
+            </div>
+          </div>
+    </section>
+
+    <!-- Order Form -->
+    <div id="orderForm" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center">
+        <div class="bg-gray-800 p-6 rounded shadow-lg w-80">
+            <h3 class="text-xl font-bold mb-4">Оформить заказ</h3>
+            <form onsubmit="submitForm(event)">
+                <div class="mb-4">
+                    <label for="productInput" class="block text-sm mb-2">Товар</label>
+                    <input type="text" id="productInput" class="w-full bg-gray-700 text-white p-2 rounded" readonly>
+                  </div>
+                  <div class="mb-4">
+                    <label for="usernameInput" class="block text-sm mb-2">Ваше имя</label>
+                    <input type="text" id="usernameInput" class="w-full bg-gray-700 text-white p-2 rounded" required>
+                  </div>
+                <div class="mb-4">
+                    <label for="telegramInput" class="block text-sm mb-2">Ваш Telegram</label>
+                    <input type="text" id="telegramInput" class="w-full bg-gray-700 text-white p-2 rounded" required>
+                </div>
+                <div class="flex justify-between">
+                    <button type="button" onclick="closeForm()" class="bg-gray-600 text-white px-4 py-2 rounded">Отмена</button>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Оформить</button>
+                  </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- User Orders Section -->
+    <section id="userOrders" class="p-10">
+        <h2 class="text-3xl font-bold text-center mb-10">Мои заказы</h2>
+        <ul id="ordersList" class="list-disc list-inside"></ul>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 p-5 text-center">
+      <p>&copy; 2024 CraftShop. Все права защищены.</p>
+    </footer>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
