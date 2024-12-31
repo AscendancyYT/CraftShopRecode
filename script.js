@@ -38,7 +38,7 @@ async function submitForm(event) {
     
     const orderId = generateOrderId();
 
-    const message = `Новый заказ!\nID заказа: ${orderId}\nЗаказчик: ${name},\nТовар: ${product},\nТелеграм: ${telegram}`;
+    const message = `Новый заказ!\nID заказа: ${orderId}\nЗаказчик: ${name},\nТовар: ${product},\nТелеграм: ${telegram}, \nЦена: ${price}`;
 
     const botToken = "7711745813:AAHazLKxh9Z0OTMwwQGPxtlGYlVd7U0ZtCc";
     const chatId = "-1002429173551";
