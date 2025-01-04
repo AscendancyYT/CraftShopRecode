@@ -44,7 +44,6 @@ async function submitForm(event) {
     const telegram = document.getElementById('telegramInput').value;
     const product = document.getElementById('productInput').value;
     
-    // Fix the price selection
     const productCard = Array.from(document.querySelectorAll('.product-card')).find(card => 
         card.querySelector('h3').textContent === product
     );
