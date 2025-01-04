@@ -80,7 +80,7 @@ function showOrders() {
     const ordersSection = document.getElementById('userOrders');
     const ordersList = document.getElementById('ordersList');
     ordersList.innerHTML = userOrders.map(order => 
-        `<li class='mb-2'>ID: ${order.orderId}, Товар: ${order.product}, Цена: ${order.price}</li>`
+        `<li class='mb-2 order-item'>ID: ${order.orderId}, Товар: ${order.product}, Цена: ${order.price}</li>`
     ).join('');
     ordersSection.classList.remove('hidden');
 }
