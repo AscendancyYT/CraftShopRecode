@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+body {
+  background: rgb(13, 121, 9);
+  background: linear-gradient(
+    90deg,
+    rgba(13, 121, 9, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.container .card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  width: 80%;
+  height: 80%;
+  transition: all 0.2s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container .card .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+
+  animation: slide-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  display: flex;
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(43%);
+  }
+}
+
+.container .card .head {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+  font-size: xx-large;
+  font-family: cursive;
+  color: #fff;
+  letter-spacing: 5px;
+  cursor: default;
+}
+.container .card .subheading {
+  width: 100%;
+  height: 3%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  letter-spacing: 2px;
+  color: #f0f0f0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container .card .content .buttons{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  top: 50px;
+}
+.container .card .content .buttons a{
+  width: 250px;
+  height: 50px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-family: cursive;
+  transition: all .2s linear;
+}
+.container .card .content .buttons a:hover{
+  background-color: #000;
+  color: #fff;
+}

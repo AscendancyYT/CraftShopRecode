@@ -70,9 +70,8 @@ async function submitForm(event) {
     userOrders.push({ orderId, product, price });
     saveOrders();
 
-    alert('Ваш заказ отправлен! Спасибо!');
     closeForm();
-    window.location.href = "https://t.me/minecraft_craftshop_bot";
+    window.location.href = "./root/success.html";
 }
 
 function showOrders() {
