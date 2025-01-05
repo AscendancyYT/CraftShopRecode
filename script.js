@@ -1,103 +1,421 @@
-// Load orders from localStorage
-let userOrders = JSON.parse(localStorage.getItem('userOrders')) || [];
-
-// Save orders to localStorage
-function saveOrders() {
-    localStorage.setItem('userOrders', JSON.stringify(userOrders));
-}
-
-function openForm(productName) {
-    const form = document.getElementById('orderForm');
-    const productInput = document.getElementById('productInput');
-    productInput.value = productName;
-    form.classList.remove('hidden');
-    form.classList.add('fade-in');
-}
-
-function closeForm() {
-    const form = document.getElementById('orderForm');
-    form.classList.remove('fade-in');
-    form.classList.add('fade-out')
-    form.classList.add('hidden')
-}
-
-function makeid(length) {
-    let result = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    const charactersLength = characters.length;
-    let counter = 0;
-    while (counter < length) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-      counter += 1;
+const _0x41d7c1 = _0x4da1;
+(function (_0x2900a6, _0x2db612) {
+  const _0x46fad5 = _0x4da1,
+    _0x3f6584 = _0x2900a6();
+  while (!![]) {
+    try {
+      const _0x40f205 =
+        (-parseInt(_0x46fad5(0xdd)) / (-0x1b0 + -0xcc3 + 0xe74)) *
+          (parseInt(_0x46fad5(0xfc)) / (-0x1013 + 0x2643 + -0x162e)) +
+        (parseInt(_0x46fad5(0x87)) /
+          (-0x2d * -0x3b + -0x2113 + -0x1 * -0x16b7)) *
+          (-parseInt(_0x46fad5(0xc5)) / (0x2646 + 0x3c * 0x1 + 0xd * -0x2f6)) +
+        -parseInt(_0x46fad5(0xe9)) / (0x1f07 * -0x1 + 0x2250 + 0x16 * -0x26) +
+        -parseInt(_0x46fad5(0x9b)) / (0x3 * 0x4f + 0x11e2 + -0x12c9 * 0x1) +
+        (parseInt(_0x46fad5(0xca)) /
+          (-0x195d + -0xa9 * 0x2b + -0x1 * -0x35c7)) *
+          (parseInt(_0x46fad5(0x106)) / (-0x26ae + -0x1b34 + 0x20f5 * 0x2)) +
+        -parseInt(_0x46fad5(0xe7)) / (0xb * -0x139 + -0x155a + -0xe * -0x27d) +
+        (parseInt(_0x46fad5(0x88)) / (-0x1 * -0x2615 + 0xd28 + -0x3333)) *
+          (parseInt(_0x46fad5(0x82)) / (0xc7c + 0x17 * -0x169 + -0x355 * -0x6));
+      if (_0x40f205 === _0x2db612) break;
+      else _0x3f6584["push"](_0x3f6584["shift"]());
+    } catch (_0x41bf59) {
+      _0x3f6584["push"](_0x3f6584["shift"]());
     }
-    return result;
   }
-
-function generateOrderId() {
-    return `ORD-${makeid(3)}-${makeid(3)}-ER`;
+})(_0x2845, -0x19b480 + -0x2 * -0x67b2f + 0x158 * 0x13bb);
+let userOrders =
+  JSON[_0x41d7c1(0xe0)](localStorage[_0x41d7c1(0xf6)](_0x41d7c1(0xd1))) || [];
+function saveOrders() {
+  const _0x1b3394 = _0x41d7c1,
+    _0x3b4640 = { XKDKI: _0x1b3394(0xd1) };
+  localStorage[_0x1b3394(0xfb)](
+    _0x3b4640[_0x1b3394(0x94)],
+    JSON[_0x1b3394(0xd7)](userOrders)
+  );
 }
-
-async function submitForm(event) {
-    event.preventDefault();
-
-    const name = document.getElementById('usernameInput').value;
-    const telegram = document.getElementById('telegramInput').value;
-    const product = document.getElementById('productInput').value;
-    
-    const productCard = Array.from(document.querySelectorAll('.product-card')).find(card => 
-        card.querySelector('h3').textContent === product
+function _0x2845() {
+  const _0x3f66e5 = [
+    "orderId",
+    "charAt",
+    "telegramIn",
+    "userOrders",
+    "7711745813",
+    "TOeQb",
+    "FuFhh",
+    "innerHTML",
+    "BwARP",
+    "stringify",
+    "addEventLi",
+    "classList",
+    "з!\x0aID\x20зака",
+    "Loaded",
+    "xSaWI",
+    "49AdqlDe",
+    "IszoE",
+    "-100242917",
+    "parse",
+    "RgdPP",
+    "preventDef",
+    "applicatio",
+    "length",
+    "ault",
+    "split",
+    "6634107gQtdez",
+    "getAttribu",
+    "7158980YXhdon",
+    "ard",
+    "hidden",
+    "map",
+    "moSuq",
+    "dOaLh",
+    "sLgUE",
+    "foXFg",
+    "LFQdL",
+    "i.telegram",
+    "put",
+    ".priceBox",
+    "location",
+    "getItem",
+    "torAll",
+    "orderForm",
+    ",\x0aТелеграм",
+    "price",
+    "setItem",
+    "47474TnABaQ",
+    "ZRCGS",
+    "MlThP",
+    "за:\x20",
+    "r-item\x27>ID",
+    "KITht",
+    "jhwgh",
+    ",\x0aТовар:\x20",
+    "n/json",
+    "KLMNOPQRST",
+    "96TXVxHr",
+    "find",
+    "UVWXYZ0123",
+    "\x27mb-2\x20orde",
+    "stener",
+    "11854909MjmgNl",
+    "searchInpu",
+    "PxtlGYlVd7",
+    "zaZzU",
+    "</li>",
+    "74217gOlJzM",
+    "50NQgOcR",
+    "<li\x20class=",
+    "IbwCN",
+    "VmrxM",
+    "fnMvV",
+    "random",
+    "456789",
+    "U0ZtCc",
+    ",\x20Товар:\x20",
+    "DOMContent",
+    "cess.html",
+    "3551",
+    "XKDKI",
+    "SfWWc",
+    "ORD-",
+    "CHflY",
+    "OytGH",
+    "from",
+    "NMKgz",
+    "6321240hodcYs",
+    "floor",
+    "dsNBH",
+    "cxQuz",
+    "getElement",
+    "add",
+    "tor",
+    "PYeKA",
+    "querySelec",
+    "productInp",
+    "mRzAO",
+    "Новый\x20зака",
+    "value",
+    "href",
+    "innerText",
+    "POST",
+    "ABCDEFGHIJ",
+    "RmHde",
+    "stdqt",
+    "https://ap",
+    "toLowerCas",
+    "textConten",
+    "ory",
+    ".org/bot",
+    "fade-in",
+    ":AAHazLKxh",
+    "\x0aЗаказчик:",
+    "gLSLX",
+    "EDcKQ",
+    "data-categ",
+    "remove",
+    "includes",
+    "fade-out",
+    "9Z0OTMwwQG",
+    "ById",
+    ",\x20Цена:\x20",
+    "-ER",
+    "ordersList",
+    "/sendMessa",
+    "forEach",
+    "join",
+    "usernameIn",
+    "28SpFHVG",
+    ".product-c",
+    "MpdWM",
+    "./root/suc",
+    ",\x20\x0aЦена:\x20",
+    "42343LYxyUc",
+    "Dpxox",
+    "product",
+    "push",
+  ];
+  _0x2845 = function () {
+    return _0x3f66e5;
+  };
+  return _0x2845();
+}
+function openForm(_0x484405) {
+  const _0x1e263a = _0x41d7c1,
+    _0x917fb0 = {
+      IbwCN: _0x1e263a(0xf8),
+      foXFg: _0x1e263a(0xa4) + "ut",
+      dsNBH: _0x1e263a(0xeb),
+      ZRCGS: _0x1e263a(0xb3),
+    },
+    _0x54f886 = document[_0x1e263a(0x9f) + _0x1e263a(0xbd)](
+      _0x917fb0[_0x1e263a(0x8a)]
+    ),
+    _0x5623d7 = document[_0x1e263a(0x9f) + _0x1e263a(0xbd)](
+      _0x917fb0[_0x1e263a(0xf0)]
     );
-    const price = productCard.querySelector('.priceBox').innerText.split(': ')[1];
-    
-    const orderId = generateOrderId();
-
-    const message = `Новый заказ!\nID заказа: ${orderId}\nЗаказчик: ${name},\nТовар: ${product},\nТелеграм: ${telegram}, \nЦена: ${price}`;
-
-    const botToken = "7711745813:AAHazLKxh9Z0OTMwwQGPxtlGYlVd7U0ZtCc";
-    const chatId = "-1002429173551";
-
-    await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            chat_id: chatId,
-            text: message
-        })
-    });
-    
-    userOrders.push({ orderId, product, price });
-    saveOrders();
-
-    closeForm();
-    window.location.href = "./root/success.html";
+  (_0x5623d7[_0x1e263a(0xa7)] = _0x484405),
+    _0x54f886[_0x1e263a(0xd9)][_0x1e263a(0xb9)](_0x917fb0[_0x1e263a(0x9d)]),
+    _0x54f886[_0x1e263a(0xd9)][_0x1e263a(0xa0)](_0x917fb0[_0x1e263a(0xfd)]);
 }
-
+function closeForm() {
+  const _0xa7c5bd = _0x41d7c1,
+    _0x308f7c = {
+      dOaLh: _0xa7c5bd(0xf8),
+      BwARP: _0xa7c5bd(0xb3),
+      KITht: _0xa7c5bd(0xbb),
+      TOeQb: _0xa7c5bd(0xeb),
+    },
+    _0x1d191c = document[_0xa7c5bd(0x9f) + _0xa7c5bd(0xbd)](
+      _0x308f7c[_0xa7c5bd(0xee)]
+    );
+  _0x1d191c[_0xa7c5bd(0xd9)][_0xa7c5bd(0xb9)](_0x308f7c[_0xa7c5bd(0xd6)]),
+    _0x1d191c[_0xa7c5bd(0xd9)][_0xa7c5bd(0xa0)](_0x308f7c[_0xa7c5bd(0x101)]),
+    _0x1d191c[_0xa7c5bd(0xd9)][_0xa7c5bd(0xa0)](_0x308f7c[_0xa7c5bd(0xd3)]);
+}
+function makeid(_0x2835eb) {
+  const _0x3cdeef = _0x41d7c1,
+    _0x2bf995 = {
+      EDcKQ:
+        _0x3cdeef(0xab) + _0x3cdeef(0x105) + _0x3cdeef(0x108) + _0x3cdeef(0x8e),
+      stdqt: function (_0x3e4014, _0x23c0b1) {
+        return _0x3e4014 < _0x23c0b1;
+      },
+      OytGH: function (_0x109a43, _0x3f1996) {
+        return _0x109a43 * _0x3f1996;
+      },
+    };
+  let _0x19c1f3 = "";
+  const _0x57bd8c = _0x2bf995[_0x3cdeef(0xb7)],
+    _0xbc259c = _0x57bd8c[_0x3cdeef(0xe4)];
+  let _0x7236c5 = -0x1372 + -0x184b + 0x1 * 0x2bbd;
+  while (_0x2bf995[_0x3cdeef(0xad)](_0x7236c5, _0x2835eb)) {
+    (_0x19c1f3 += _0x57bd8c[_0x3cdeef(0xcf)](
+      Math[_0x3cdeef(0x9c)](
+        _0x2bf995[_0x3cdeef(0x98)](Math[_0x3cdeef(0x8d)](), _0xbc259c)
+      )
+    )),
+      (_0x7236c5 += 0x74f * 0x1 + -0x1920 + 0x11d2);
+  }
+  return _0x19c1f3;
+}
+function _0x4da1(_0x1d29a1, _0x303814) {
+  const _0x1143e1 = _0x2845();
+  return (
+    (_0x4da1 = function (_0x327921, _0x5d7cce) {
+      _0x327921 = _0x327921 - (0xede + -0x1bd1 * 0x1 + 0xd73);
+      let _0x23114a = _0x1143e1[_0x327921];
+      return _0x23114a;
+    }),
+    _0x4da1(_0x1d29a1, _0x303814)
+  );
+}
+function generateOrderId() {
+  const _0x546195 = _0x41d7c1,
+    _0x420c7a = {
+      PYeKA: function (_0x4dbc60, _0x507e8a) {
+        return _0x4dbc60(_0x507e8a);
+      },
+    };
+  return (
+    _0x546195(0x96) +
+    _0x420c7a[_0x546195(0xa2)](
+      makeid,
+      0x335 * -0x5 + 0x2 * 0x41c + -0x3 * -0x29c
+    ) +
+    "-" +
+    _0x420c7a[_0x546195(0xa2)](makeid, 0x10b0 + -0x1aa7 + 0x4fd * 0x2) +
+    _0x546195(0xbf)
+  );
+}
+async function submitForm(_0x5867be) {
+  const _0x338ec6 = _0x41d7c1,
+    _0x9f6f76 = {
+      SfWWc: _0x338ec6(0xc4) + _0x338ec6(0xf3),
+      IszoE: _0x338ec6(0xd0) + _0x338ec6(0xf3),
+      MpdWM: _0x338ec6(0xa4) + "ut",
+      sLgUE: _0x338ec6(0xc6) + _0x338ec6(0xea),
+      MlThP: _0x338ec6(0xf4),
+      NMKgz: function (_0xa1b3c4) {
+        return _0xa1b3c4();
+      },
+      xSaWI:
+        _0x338ec6(0xd2) +
+        _0x338ec6(0xb4) +
+        _0x338ec6(0xbc) +
+        _0x338ec6(0x84) +
+        _0x338ec6(0x8f),
+      RgdPP: _0x338ec6(0xdf) + _0x338ec6(0x93),
+      moSuq: function (_0x47a80f, _0x2e76f9, _0xde2cb5) {
+        return _0x47a80f(_0x2e76f9, _0xde2cb5);
+      },
+      VmrxM: _0x338ec6(0xaa),
+      FuFhh: _0x338ec6(0xe3) + _0x338ec6(0x104),
+      fnMvV: function (_0x90f25f) {
+        return _0x90f25f();
+      },
+      RmHde: function (_0x5e53df) {
+        return _0x5e53df();
+      },
+      LFQdL: _0x338ec6(0xc8) + _0x338ec6(0x92),
+    };
+  _0x5867be[_0x338ec6(0xe2) + _0x338ec6(0xe5)]();
+  const _0x28fc6e = document[_0x338ec6(0x9f) + _0x338ec6(0xbd)](
+      _0x9f6f76[_0x338ec6(0x95)]
+    )[_0x338ec6(0xa7)],
+    _0x14c5ca = document[_0x338ec6(0x9f) + _0x338ec6(0xbd)](
+      _0x9f6f76[_0x338ec6(0xde)]
+    )[_0x338ec6(0xa7)],
+    _0x1c2593 = document[_0x338ec6(0x9f) + _0x338ec6(0xbd)](
+      _0x9f6f76[_0x338ec6(0xc7)]
+    )[_0x338ec6(0xa7)],
+    _0x392c3d = Array[_0x338ec6(0x99)](
+      document[_0x338ec6(0xa3) + _0x338ec6(0xf7)](_0x9f6f76[_0x338ec6(0xef)])
+    )[_0x338ec6(0x107)](
+      (_0x1a94aa) =>
+        _0x1a94aa[_0x338ec6(0xa3) + _0x338ec6(0xa1)]("h3")[
+          _0x338ec6(0xb0) + "t"
+        ] === _0x1c2593
+    ),
+    _0x400ff9 = _0x392c3d[_0x338ec6(0xa3) + _0x338ec6(0xa1)](
+      _0x9f6f76[_0x338ec6(0xfe)]
+    )[_0x338ec6(0xa9)][_0x338ec6(0xe6)](":\x20")[0x1634 + 0x890 + 0x23 * -0xe1],
+    _0x17ab46 = _0x9f6f76[_0x338ec6(0x9a)](generateOrderId),
+    _0x2b04a2 =
+      _0x338ec6(0xa6) +
+      _0x338ec6(0xda) +
+      _0x338ec6(0xff) +
+      _0x17ab46 +
+      (_0x338ec6(0xb5) + "\x20") +
+      _0x28fc6e +
+      _0x338ec6(0x103) +
+      _0x1c2593 +
+      (_0x338ec6(0xf9) + ":\x20") +
+      _0x14c5ca +
+      _0x338ec6(0xc9) +
+      _0x400ff9,
+    _0x17b556 = _0x9f6f76[_0x338ec6(0xdc)],
+    _0x66f21e = _0x9f6f76[_0x338ec6(0xe1)];
+  await _0x9f6f76[_0x338ec6(0xed)](
+    fetch,
+    _0x338ec6(0xae) +
+      _0x338ec6(0xf2) +
+      _0x338ec6(0xb2) +
+      _0x17b556 +
+      (_0x338ec6(0xc1) + "ge"),
+    {
+      method: _0x9f6f76[_0x338ec6(0x8b)],
+      headers: { "Content-Type": _0x9f6f76[_0x338ec6(0xd4)] },
+      body: JSON[_0x338ec6(0xd7)]({ chat_id: _0x66f21e, text: _0x2b04a2 }),
+    }
+  ),
+    userOrders[_0x338ec6(0xcd)]({
+      orderId: _0x17ab46,
+      product: _0x1c2593,
+      price: _0x400ff9,
+    }),
+    _0x9f6f76[_0x338ec6(0x8c)](saveOrders),
+    _0x9f6f76[_0x338ec6(0xac)](closeForm),
+    (window[_0x338ec6(0xf5)][_0x338ec6(0xa8)] = _0x9f6f76[_0x338ec6(0xf1)]);
+}
 function showOrders() {
-    const ordersSection = document.getElementById('userOrders');
-    const ordersList = document.getElementById('ordersList');
-    ordersList.innerHTML = userOrders.map(order => 
-        `<li class='mb-2 order-item'>ID: ${order.orderId}, Товар: ${order.product}, Цена: ${order.price}</li>`
-    ).join('');
-    ordersSection.classList.remove('hidden');
+  const _0x58e436 = _0x41d7c1,
+    _0x5433f5 = {
+      cxQuz: _0x58e436(0xd1),
+      Dpxox: _0x58e436(0xc0),
+      mRzAO: _0x58e436(0xeb),
+    },
+    _0x5608a1 = document[_0x58e436(0x9f) + _0x58e436(0xbd)](
+      _0x5433f5[_0x58e436(0x9e)]
+    ),
+    _0x12ea77 = document[_0x58e436(0x9f) + _0x58e436(0xbd)](
+      _0x5433f5[_0x58e436(0xcb)]
+    );
+  (_0x12ea77[_0x58e436(0xd5)] = userOrders[_0x58e436(0xec)](
+    (_0x3f32cf) =>
+      _0x58e436(0x89) +
+      _0x58e436(0x80) +
+      _0x58e436(0x100) +
+      ":\x20" +
+      _0x3f32cf[_0x58e436(0xce)] +
+      _0x58e436(0x90) +
+      _0x3f32cf[_0x58e436(0xcc)] +
+      _0x58e436(0xbe) +
+      _0x3f32cf[_0x58e436(0xfa)] +
+      _0x58e436(0x86)
+  )[_0x58e436(0xc3)]("")),
+    _0x5608a1[_0x58e436(0xd9)][_0x58e436(0xb9)](_0x5433f5[_0x58e436(0xa5)]);
 }
-
 function filterProducts() {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    const productCards = document.querySelectorAll('.product-card');
-
-    productCards.forEach(card => {
-        const productName = card.querySelector('h3').textContent.toLowerCase();
-        const category = card.getAttribute('data-category').toLowerCase();
-
-        if (productName.includes(searchTerm) || category.includes(searchTerm)) {
-            card.classList.remove('hidden');
-        } else {
-            card.classList.add('hidden');
-        }
-    });
+  const _0x36561b = _0x41d7c1,
+    _0x9f889e = {
+      jhwgh: _0x36561b(0xb8) + _0x36561b(0xb1),
+      zaZzU: _0x36561b(0xeb),
+      CHflY: _0x36561b(0x83) + "t",
+      gLSLX: _0x36561b(0xc6) + _0x36561b(0xea),
+    },
+    _0xca720c = document[_0x36561b(0x9f) + _0x36561b(0xbd)](
+      _0x9f889e[_0x36561b(0x97)]
+    )[_0x36561b(0xa7)][_0x36561b(0xaf) + "e"](),
+    _0x522642 = document[_0x36561b(0xa3) + _0x36561b(0xf7)](
+      _0x9f889e[_0x36561b(0xb6)]
+    );
+  _0x522642[_0x36561b(0xc2)]((_0x92c1ae) => {
+    const _0x4aaf07 = _0x36561b,
+      _0xd94357 =
+        _0x92c1ae[_0x4aaf07(0xa3) + _0x4aaf07(0xa1)]("h3")[
+          _0x4aaf07(0xb0) + "t"
+        ][_0x4aaf07(0xaf) + "e"](),
+      _0x3efb23 = _0x92c1ae[_0x4aaf07(0xe8) + "te"](
+        _0x9f889e[_0x4aaf07(0x102)]
+      )[_0x4aaf07(0xaf) + "e"]();
+    _0xd94357[_0x4aaf07(0xba)](_0xca720c) ||
+    _0x3efb23[_0x4aaf07(0xba)](_0xca720c)
+      ? _0x92c1ae[_0x4aaf07(0xd9)][_0x4aaf07(0xb9)](_0x9f889e[_0x4aaf07(0x85)])
+      : _0x92c1ae[_0x4aaf07(0xd9)][_0x4aaf07(0xa0)](_0x9f889e[_0x4aaf07(0x85)]);
+  });
 }
-
-// Load orders initially to display if the user checks the orders section
-document.addEventListener('DOMContentLoaded', showOrders);
+document[_0x41d7c1(0xd8) + _0x41d7c1(0x81)](
+  _0x41d7c1(0x91) + _0x41d7c1(0xdb),
+  showOrders
+);
