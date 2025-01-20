@@ -136,3 +136,23 @@ button:hover {
     top: 50px;
   }
 }
+@media screen and (width < 601px) {
+  .hero-section .content .about-text{
+    display: none !important;
+  }
+}
+@media screen and (width < 551px) {
+  .order-item{
+    font-size: small;
+  }
+}
+@media screen and (width < 461px) {
+  .order-item{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+}
