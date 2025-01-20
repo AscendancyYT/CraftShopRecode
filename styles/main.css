@@ -106,13 +106,33 @@ button:hover {
 }
 
 @keyframes slide {
-  0%{
+  0% {
     transform: translateY(0);
   }
-  50%{
+  50% {
     transform: translateY(50px);
   }
-  100%{
+  100% {
     transform: translateY(0);
+  }
+}
+
+@media screen and (width < 1084px) {
+  .hero-section .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column !important;
+  }
+  .hero-section .content .about-text {
+    width: 100%;
+    height: 50%;
+  }
+  .hero-section .content .grassBlock {
+    display: none;
+  }
+  #products {
+    position: relative;
+    top: 50px;
   }
 }
